@@ -1,0 +1,4 @@
+SetEnv GEM_HOME /home1/hongejib/ruby/gems
+RailsEnv development
+PassengerEnabled On
+PassengerAppRoot /home1/hongejib/rails_apps/newapp/

@@ -2,12 +2,8 @@ class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.json
   def index
-    @invoices = Invoice.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @invoices }
-    end
+    @search = InvoiceSearch.new(params[:search])
+    @invoices = @search.scope
   end
 
   # GET /invoices/1
